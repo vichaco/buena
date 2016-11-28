@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
@@ -29,6 +31,19 @@
             </items>
           </Menu>
         </menus>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow color="WHITE" />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#3bd5f7" />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
       </MenuBar>
    </top>
 </BorderPane>
