@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
@@ -17,8 +18,8 @@
                <children>
                   <TableView fx:id="personTable" layoutX="-27.0" minWidth="300.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn fx:id="firstNameColumn" prefWidth="75.0" text="first name" />
-                      <TableColumn fx:id="lastNameColumn" prefWidth="75.0" text="last name" />
+                      <TableColumn fx:id="firstNameColumn" prefWidth="75.0" text="First name" />
+                      <TableColumn fx:id="lastNameColumn" prefWidth="75.0" text="Last name" />
                     </columns>
                      <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -26,23 +27,8 @@
                   </TableView>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="200.0" prefWidth="350.0" styleClass="background" stylesheets="@DarkTheme.css">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="299.0" prefWidth="393.0" styleClass="background" stylesheets="@DarkTheme.css">
                <children>
-                  <Label layoutX="8.0" layoutY="6.0" styleClass="label-header" text="person details" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
-                     <effect>
-                        <Glow level="1.0">
-                           <input>
-                              <Lighting>
-                                 <bumpInput>
-                                    <Shadow color="WHITE" />
-                                 </bumpInput>
-                                 <light>
-                                    <Light.Distant color="#27a1bf" />
-                                 </light>
-                              </Lighting>
-                           </input>
-                        </Glow>
-                     </effect></Label>
                   <GridPane layoutX="-50.0" layoutY="79.0" prefHeight="157.0" prefWidth="400.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="79.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -173,53 +159,51 @@
                            </effect></Label>
                      </children>
                   </GridPane>
-                  <HBox layoutX="5.0" layoutY="259.0" prefHeight="33.0" prefWidth="289.0">
+                  <HBox alignment="BOTTOM_LEFT" layoutY="243.0" prefHeight="46.0" prefWidth="311.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="243.0">
                      <children>
-                        <Button layoutX="120.0" layoutY="256.0" mnemonicParsing="false" onAction="#handleNewPerson" prefWidth="100.0" text="new person">
-                           <HBox.margin>
-                              <Insets right="2.0" />
-                           </HBox.margin>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
+                        <ImageView fitHeight="44.0" fitWidth="94.0" onMouseClicked="#handleNewPerson" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../../../resources/images/añadir1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="43.0" fitWidth="104.0" onMouseClicked="#handleEditPerson" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../../../resources/images/edit1.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="43.0" fitWidth="93.0" onMouseClicked="#handleDeletePerson" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../../../resources/images/borrar1.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="75.0" prefWidth="311.0">
+                     <children>
+                        <Label styleClass="label-header" text="Person details">
                            <effect>
-                              <Glow level="0.25">
+                              <Glow level="1.0">
                                  <input>
-                                    <InnerShadow choke="0.49" color="#2c7ea3" />
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow color="WHITE" />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant color="#27a1bf" />
+                                       </light>
+                                    </Lighting>
                                  </input>
                               </Glow>
                            </effect>
-                        </Button>
-                        <Button layoutX="168.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleEditPerson" prefWidth="100.0" text="edit person">
-                           <HBox.margin>
-                              <Insets right="2.0" />
-                           </HBox.margin>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <effect>
-                              <Glow level="0.25">
-                                 <input>
-                                    <InnerShadow choke="0.49" color="#2c7ea3" />
-                                 </input>
-                              </Glow>
-                           </effect>
-                        </Button>
-                        <Button layoutX="230.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleDeletePerson" prefWidth="100.0" text="delete">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <effect>
-                              <Glow level="0.25">
-                                 <input>
-                                    <InnerShadow choke="0.49" color="#2c7ea3" />
-                                 </input>
-                              </Glow>
-                           </effect>
-                        </Button>
+                        </Label>
+                        <ImageView fitHeight="77.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../AdressAppMiguelContreras/resources/images/2733450_640px.jpg" />
+                           </image>
+                        </ImageView>
                      </children>
                   </HBox>
                </children>

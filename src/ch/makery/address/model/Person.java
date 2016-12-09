@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import ch.makery.address.util.LocalDateAdapter;
 
 /**
- * Model class for a Person.
+ * Model class for a Person.///
  *
  * @author Marco Jakob
  */

@@ -100,7 +100,7 @@ public class MainApp extends Application {
 	}
 
 	/**
-	 * Shows the person overview inside the root layout.
+	 * Shows the person overview inside the root layout.//////////
 	 */
 	public void showPersonOverview() {
 		try {
@@ -142,7 +142,7 @@ public class MainApp extends Application {
 			dialogStage.setTitle("Edit Person");
 			dialogStage.initModality(Modality.WINDOW_MODAL);
 			dialogStage.initOwner(primaryStage);
-			dialogStage.getIcons().add(new Image("file:resources/images/edit.png"));
+			dialogStage.getIcons().add(new Image("file:resources/images/icono-de-la-agenda-18887532.jpg"));
 			Scene scene = new Scene(page);
 			dialogStage.setScene(scene);
 
@@ -150,6 +150,8 @@ public class MainApp extends Application {
 			PersonEditDialogController controller = loader.getController();
 			controller.setDialogStage(dialogStage);
 			controller.setPerson(person);
+			
+
 
 			// Show the dialog and wait until the user closes it
 			dialogStage.showAndWait();

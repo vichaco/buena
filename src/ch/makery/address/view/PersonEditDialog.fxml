@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import java.net.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.paint.*?>
@@ -68,24 +69,15 @@
 </children>
 </GridPane>
 <HBox layoutX="197.1875" layoutY="241.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
-<children><Button defaultButton="true" layoutX="197.1875" layoutY="241.0" mnemonicParsing="false" onAction="#handleOk" prefWidth="90.0" text="OK" underline="true">
+<children>
+            <ImageView fitHeight="39.0" fitWidth="70.0" onMouseClicked="#handleOk" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../AdressAppMiguelContreras/resources/images/botonok.jpg" />
+               </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
-               <effect>
-                  <Glow level="0.6">
-                     <input>
-                        <Lighting>
-                           <bumpInput>
-                              <Shadow />
-                           </bumpInput>
-                           <light>
-                              <Light.Distant color="#27a1bf" />
-                           </light>
-                        </Lighting>
-                     </input>
-                  </Glow>
-               </effect></Button><Button layoutX="249.375" layoutY="241.0" mnemonicParsing="false" onAction="#handleCancel" prefWidth="90.0" text="Cancel" underline="true">
+            </ImageView><Button layoutX="249.375" layoutY="241.0" mnemonicParsing="false" onAction="#handleCancel" onMouseClicked="#handleCancel" prefWidth="90.0" text="Cancel" underline="true">
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
                </cursor>

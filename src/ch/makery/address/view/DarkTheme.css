@@ -1,3 +1,6 @@
+.chart-bar{
+	-fx-bar-fill: #27a1bf;
+	}
 .background {
     -fx-background-color: #1d1d1d;
 }
